@@ -66,12 +66,13 @@
 		
 		/* ====== 主体布局 ====== */
 		.container {
-		    max-width: 1050px;
-		    margin: 0 auto;
-		    padding: 40px;
-		    display: grid;
-		    grid-template-columns: 250px 750px;
-		    gap: 30px;
+		    width: 70%;        /* 占 sidebar 宽度的 70% */
+		    max-width: 160px;  /* 但不会超过 160px */
+		    height: auto;      /* 高度自适应 */
+		    border-radius: 50%;
+		    margin: 0 auto 20px;
+		    display: block;
+		    object-fit: cover;
 		}
 		
 		.sidebar {
