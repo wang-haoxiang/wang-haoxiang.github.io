@@ -80,26 +80,23 @@
 		    height: fit-content;
 		    border-right: 1px solid #ddd;
 		    padding-right: 20px;
+			text-align: center;   /* 文字、inline 元素居中 */
 		}
 		
+		
 		.sidebar img {
-		    width: 200px;
-		    height: 200px;
-		    border-radius: 50%;
-		    margin-bottom: 30px;
-		    object-fit: cover;
+		  margin: 0 auto 20px;  /* 图片居中 */
+		  display: block;
 		}
 		
 		.sidebar h {
-		    font-size: 1.4rem;
-		    margin-bottom: 8px;
+		  display: block;
+		  margin-bottom: 15px;
 		}
 		
 		.sidebar div {
-		    margin-bottom: 15px;
-		    display: flex;
-		    align-items: flex-start;
-		    gap: 10px;
+		  display: flex;
+		  justify-content: center; /* 链接/图标水平居中 */
 		}
 		
 		.sidebar svg {
@@ -206,9 +203,6 @@
 		<aside class="sidebar">
 			<img src="profile.jpg" alt="Haoxiang Wang">
 			<h>Haoxiang Wang<br><span class="chinese-name">王昊翔</span></h>
-			<div>
-				<a href="mailto:whx@kcl.ac.uk">📧</a>
-			</div>
 			<div>
 				<a href="https://www.linkedin.com/in/haoxiang-frank-wang-8bb615a5/" target="_blank">
 					<svg viewBox="0 0 24 24" fill="#0077b5" xmlns="http://www.w3.org/2000/svg">
