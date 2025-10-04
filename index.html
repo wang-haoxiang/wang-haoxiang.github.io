@@ -19,18 +19,27 @@
 		    font-size: 16px;
 		}
 		
-		<nav>
-		  <div class="nav-left">
-		    <div class="name">Haoxiang Wang | <span class="chinese-name">王昊翔</span></div>
-		  </div>
-		  <div class="nav-center">
-		    <a href="#about">About</a>
-		    <a href="#education">Education</a>
-		    <a href="#research">Research Interests</a>
-		    <a href="#publications">Publications</a>
-		    <a href="#teaching">Teaching</a>
-		  </div>
-		</nav>
+		nav {
+		  background: white;
+		  border-bottom: 1px solid #ddd;
+		  padding: 20px 40px;
+		  display: flex;                 /* 关键：激活 Flex 布局 */
+		  align-items: center;
+		  justify-content: space-between;/* 左右分散：左侧名字固定在左，右侧区域单独占位 */
+		  max-width: 1050px;             /* 与 .container 对齐 */
+		  margin: 0 auto;                /* 整体水平居中 */
+		}
+		
+		.nav-left {
+		  flex: 0 0 auto;                /* 固定在左侧 */
+		}
+		
+		.nav-center {
+		  flex: 1;                       /* 占据剩余空间 */
+		  display: flex;
+		  justify-content: center;       /* 导航链接在中间居中 */
+		  gap: 40px;
+		}
 		
 		nav .name {
 		    font-size: 1.3rem;
@@ -62,6 +71,7 @@
 		    position: sticky;
 		    top: 40px;
 		    height: fit-content;
+		          border-right: 1px solid #ddd;
 		}
 		
 		.sidebar img {
@@ -107,10 +117,8 @@
 		}
 		
 		main {
-		    background: white;
+		
 		    padding: 50px;
-		    border-radius: 5px;
-		    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 		}
 		
 		main h2 {
