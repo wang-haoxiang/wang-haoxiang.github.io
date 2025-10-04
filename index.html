@@ -31,8 +31,15 @@
 		    margin: 0 auto;
 		}
 		
-		.nav-left {
-		    flex: 0 0 auto;
+		.nav-left .name {
+		  font-size: 1.3rem;
+		  font-weight: 600;
+		  color: black;
+		  text-decoration: none;
+		}
+		
+		.nav-left .name:hover {
+		  text-decoration: underline; /* 悬停时加下划线，更明显 */
 		}
 		
 		.nav-center {
@@ -83,7 +90,7 @@
 		    object-fit: cover;
 		}
 		
-		.sidebar h2 {
+		.sidebar h {
 		    font-size: 1.4rem;
 		    margin-bottom: 8px;
 		}
@@ -105,19 +112,15 @@
 		    padding: 50px;
 		}
 		
-		main h2 {
+		main h {
 		    font-size: 1.6rem;
 		    margin-top: 10px;
 		    margin-bottom: 10px;
 		}
-		main section:first-child h2 {
+		main section:first-child h {
 		    margin-top: 0;
 		}
-		main h3 {
-		    font-size: 1.15rem;
-		    margin-top: 10px;
-		    margin-bottom: 10px;
-		}
+		      
 		main p {
 		    margin-bottom: 15px;
 		    font-size: 1rem;
@@ -189,62 +192,59 @@
 <body>
 	<nav>
 		<div class="nav-left">
-			<div class="name">Haoxiang Wang | <span class="chinese-name">王昊翔</span></div>
+			<a href="https://wang-haoxiang.github.io/" class="name"> Haoxiang Wang | <span class="chinese-name">王昊翔</span>
+			</a>
 		</div>
 		<div class="nav-center">
 			<a href="#about">About</a>
 			<a href="#education">Education</a>
-			<a href="#research">Research Interests</a>
+			<a href="#publications">Publications</a>
 			<a href="#teaching">Teaching</a>
 		</div>
 	</nav>
 	<div class="container">
 		<aside class="sidebar">
 			<img src="profile.jpg" alt="Haoxiang Wang">
-			<h2>Haoxiang Wang<br><span class="chinese-name">王昊翔</span></h2>
+			<h>Haoxiang Wang<br><span class="chinese-name">王昊翔</span></h>
 			<div>
-			  <a href="mailto:whx@kcl.ac.uk">📧</a>
+				<a href="mailto:whx@kcl.ac.uk">📧</a>
 			</div>
 			<div>
-			  <a href="https://www.linkedin.com/in/haoxiang-frank-wang-8bb615a5/" target="_blank">
-			    <svg viewBox="0 0 24 24" fill="#0077b5" xmlns="http://www.w3.org/2000/svg">
-			      <path
-			        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-			    </svg>
-			  </a>
+				<a href="https://www.linkedin.com/in/haoxiang-frank-wang-8bb615a5/" target="_blank">
+					<svg viewBox="0 0 24 24" fill="#0077b5" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h0.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+					</svg>
+				</a>
 			</div>
 		</aside>
 		<main>
 			<section id="about">
-				<h2>About me</h2>
+				<h>About me</h>
 				<p> I am Haoxiang (Frank) Wang, <span class="chinese-name">王昊翔</span>, a 4th-year PhD candidate in Computer Science at <a href="https://www.kcl.ac.uk/informatics">Department of Informatics</a>, <a href="https://www.kcl.ac.uk/">King's College London</a>. <br> My research interests
-					focus on the intersection of Operations Research and Artificial Intelligence. </p>
+					include sequential optimization and learning under uncertainty, with applications to inventory, pricing, and routing. </p>
 			</section>
 			<section id="education">
-				<h2>Education</h2>
-				<h3>King's College London</h3>
+				<h>Education</h>
+				<b>King's College London</b>
 				<p>PhD in Computer Science, 2022/10 - 2025/12 (expected)</p>
-				<h3>London School of Economics</h3>
+				<b>London School of Economics</b>
 				<p>MSc in Operations Research and Analytics, 2018/10 - 2019/11</p>
-				<h3>University of Shanghai for Science and Technology</h3>
+				<b>University of Shanghai for Science and Technology</b>
 				<p>BSc in Management Science, 2013/09 - 2017/06</p>
 			</section>
-			<section id="research">
-				<h2>Research</h2>
-				<h3>Research Interests</h3>
-				<p>Sequential learning and optimization under uncertainty, with applications to inventory, pricing, and routing.</p>
-				<h3>Publications</h3>
+			<section id="publications">
+				<h>Publications</h>
 				<p class="note">[To be updated]</p>
 			</section>
 			<section id="teaching">
-				<h2>Teaching</h2>
+				<h>Teaching</h>
 				<p>I usually teach applied mathematical courses to students in Economics, Management, and Computer Science programs.</p>
-				<h3>LSE MA213 Operations Research Techniques</h3>
-				<p>Autumn Term 2023, 2024, 2025</p>
-				<h3>KCL 6CCS3OME & 7CCSMOME Optimization Methods</h3>
-				<p>Spring Term 2024, 2025</p>
+				<p><b>LSE MA213 Operations Research Techniques</b>, Autumn Term 2023, 2024, 2025.</p>
+				<p><b>KCL 6CCS3OME & 7CCSMOME Optimization Methods</b>, Spring Term 2024, 2025.</p>
 			</section>
-			<div style="margin-top: 20px; transform: scale(0.5); transform-origin: center;"><script type="text/javascript" id="clustrmaps" src="https://clustrmaps.com/map_v2.js?d=nqY6ZdaDJJZztN-knDZjpnZVe7n5-fCil3mLPEa38D0&cl=ffffff&w=a"></script>
+			<div style="margin-top: 20px; transform: scale(0.5); transform-origin: center;">
+				<script type="text/javascript" id="clustrmaps" src="https://clustrmaps.com/map_v2.js?d=nqY6ZdaDJJZztN-knDZjpnZVe7n5-fCil3mLPEa38D0&cl=ffffff&w=a"></script>
 			</div>
 		</main>
 	</div>
