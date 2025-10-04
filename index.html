@@ -14,52 +14,52 @@
 		body {
 		    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 		    line-height: 1.6;
-		    color: #333;
+		    color: black;     /* 全局文字颜色一次性设置 */
 		    background: white;
 		    font-size: 16px;
 		}
 		
+		/* ====== 导航栏 ====== */
 		nav {
-		  background: white;
-		  border-bottom: 1px solid #ddd;
-		  padding: 20px 40px;
-		  display: flex;                 /* 关键：激活 Flex 布局 */
-		  align-items: center;
-		  justify-content: space-between;/* 左右分散：左侧名字固定在左，右侧区域单独占位 */
-		  max-width: 1050px;             /* 与 .container 对齐 */
-		  margin: 0 auto;                /* 整体水平居中 */
+		    background: white;
+		    border-bottom: 1px solid #ddd;
+		    padding: 20px 40px;
+		    display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    max-width: 1050px;
+		    margin: 0 auto;
 		}
 		
 		.nav-left {
-		  flex: 0 0 auto;                /* 固定在左侧 */
+		    flex: 0 0 auto;
 		}
 		
 		.nav-center {
-		  flex: 1;                       /* 占据剩余空间 */
-		  display: flex;
-		  justify-content: center;       /* 导航链接在中间居中 */
-		  gap: 40px;
+		    flex: 1;
+		    display: flex;
+		    justify-content: center;
+		    gap: 40px;
 		}
 		
 		nav .name {
 		    font-size: 1.3rem;
 		    font-weight: 600;
-		    color: #555;
 		}
 		
 		nav a {
-		    color: #888;
+		    color: black;                /* 链接也变黑 */
 		    text-decoration: none;
 		    font-size: 1rem;
 		    transition: color 0.3s;
 		}
-		
 		nav a:hover {
-		    color: #5bc0de;
+		    text-decoration: underline;  /* 悬停时加下划线 */
 		}
 		
+		/* ====== 主体布局 ====== */
 		.container {
-		    max-width: 1050px;    
+		    max-width: 1050px;
 		    margin: 0 auto;
 		    padding: 40px;
 		    display: grid;
@@ -71,7 +71,8 @@
 		    position: sticky;
 		    top: 40px;
 		    height: fit-content;
-		          border-right: 1px solid #ddd;
+		    border-right: 1px solid #ddd;
+		    padding-right: 20px;
 		}
 		
 		.sidebar img {
@@ -85,7 +86,6 @@
 		.sidebar h2 {
 		    font-size: 1.4rem;
 		    margin-bottom: 8px;
-		    color: #333;
 		}
 		
 		.sidebar div {
@@ -93,21 +93,6 @@
 		    display: flex;
 		    align-items: flex-start;
 		    gap: 10px;
-		    color: #555;
-		}
-		
-		.sidebar span {
-		    color: #888;
-		    margin-top: 2px;
-		}
-		
-		.sidebar a {
-		    color: #5bc0de;
-		    text-decoration: none;
-		}
-		
-		.sidebar a:hover {
-		    text-decoration: underline;
 		}
 		
 		.sidebar svg {
@@ -117,7 +102,6 @@
 		}
 		
 		main {
-		
 		    padding: 50px;
 		}
 		
@@ -125,20 +109,15 @@
 		    font-size: 1.6rem;
 		    margin-top: 10px;
 		    margin-bottom: 10px;
-		    color: #333;
 		}
-		
 		main section:first-child h2 {
 		    margin-top: 0;
 		}
-		
 		main h3 {
 		    font-size: 1.15rem;
-		    color: #555;
 		    margin-top: 10px;
 		    margin-bottom: 10px;
 		}
-		
 		main p {
 		    margin-bottom: 15px;
 		    font-size: 1rem;
@@ -146,37 +125,38 @@
 		}
 		
 		main a {
-		    color: #5bc0de;
+		    color: black;
 		    text-decoration: none;
 		}
-		
 		main a:hover {
 		    text-decoration: underline;
 		}
 		
+		/* ====== 页脚 ====== */
 		footer {
 		    text-align: center;
 		    padding: 30px 20px;
-		    color: #666;
 		    font-size: 0.95rem;
 		    margin-top: 40px;
 		}
 		
+		/* ====== 特殊样式 ====== */
 		.chinese-name {
 		    font-family: KaiTi, STKaiti, '楷体', serif;
 		}
 		
 		.note {
-		    color: #999;
 		    font-style: italic;
 		    font-size: 0.9rem;
 		}
 		
+		/* ====== 响应式设计 ====== */
 		@media (max-width: 1024px) {
 		    nav {
 		        flex-direction: column;
-		        align-items: flex-start;
-		        gap: 20px;
+		        align-items: center;
+		        gap: 14px;
+		        padding: 16px 20px;
 		    }
 		
 		    .container {
@@ -187,6 +167,8 @@
 		    .sidebar {
 		        position: static;
 		        text-align: center;
+		        border-right: none;
+		        padding-right: 0;
 		    }
 		
 		    .sidebar img {
@@ -201,20 +183,18 @@
 		        padding: 30px;
 		    }
 		}
+		
 	</style>
 </head>
 <body>
 	<nav>
 		<div class="nav-left">
-		  <a href="https://wang-haoxiang.github.io/" class="home-link">
-		    Haoxiang Wang | <span class="chinese-name">王昊翔</span>
-		  </a>
+			<div class="name">Haoxiang Wang | <span class="chinese-name">王昊翔</span></div>
 		</div>
 		<div class="nav-center">
 			<a href="#about">About</a>
 			<a href="#education">Education</a>
 			<a href="#research">Research Interests</a>
-			<a href="#publications">Publications</a>
 			<a href="#teaching">Teaching</a>
 		</div>
 	</nav>
@@ -243,21 +223,18 @@
 			<section id="education">
 				<h2>Education</h2>
 				<h3>King's College London</h3>
-				<p>PhD in Computer Science, October 2022 - December 2025 (expected)</p>
+				<p>PhD in Computer Science, 2022/10 - 2025/12 (expected)</p>
 				<h3>London School of Economics</h3>
-				<p>MSc in Operations Research and Analytics, October 2018 - November 2019</p>
+				<p>MSc in Operations Research and Analytics, 2018/10 - 2019/11</p>
 				<h3>University of Shanghai for Science and Technology</h3>
-				<p>BSc in Management Science, September 2013 - June 2017</p>
+				<p>BSc in Management Science, 2013/09 - 2017/06</p>
 			</section>
 			<section id="research">
-				<h2>Research Interests</h2>
-				<h3>Methodologies</h3>
-				<p>Sequential optimization and learning under uncertainty.</p>
-				<h3>Applications</h3>
-				<p>Inventory, pricing, routing.</p>
-			</section>
-			<section id="publications">
-				<h2>Publications</h2>
+				<h2>Research</h2>
+				<h3>Research Interests</h3>
+				<p>Methodologies: sequential optimization and learning under uncertainty.</p>
+				<p>Applications: inventory, pricing, routing.</p>
+				<h3>Publications</h3>
 				<p class="note">[To be updated]</p>
 			</section>
 			<section id="teaching">
@@ -268,9 +245,6 @@
 				<h3>KCL 6CCS3OME & 7CCSMOME Optimization Methods</h3>
 				<p>Spring Term 2024, 2025</p>
 			</section>
-			<div style="margin-top: 20px; transform: scale(0.3); transform-origin: center;">
-            <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=nqY6ZdaDJJZztN-knDZjpnZVe7n5-fCil3mLPEa38D0&cl=ffffff&w=a"></script>
-            </div>
 		</main>
 	</div>
 	<footer>
